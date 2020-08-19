@@ -1,2 +1,2 @@
 # GRIBs
-## My attempt to create Single Activity app without any fragments using RIBs framework
+### My attempt to create Single Activity app without any fragments using RIBs framework
