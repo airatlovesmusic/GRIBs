@@ -23,7 +23,10 @@ class MainInteractor : Interactor<MainInteractor.MainPresenter, MainRouter>() {
       .subscribe { listener.goToSecondScreen() }
       .apply { disposables.add(this) }
     presenter.showSnack()
-      .subscribe { listener.showSnack(it) }
+      .subscribe {
+        listener.showSnack(it)
+        listener.logMessage(it)
+      }
       .apply { disposables.add(this) }
   }
 
@@ -35,6 +38,7 @@ class MainInteractor : Interactor<MainInteractor.MainPresenter, MainRouter>() {
   interface Listener {
     fun goToSecondScreen()
     fun showSnack(message: String)
+    fun logMessage(message: String)
   }
 
   interface MainPresenter {

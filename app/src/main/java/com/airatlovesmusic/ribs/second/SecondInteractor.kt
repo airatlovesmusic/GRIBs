@@ -23,7 +23,10 @@ class SecondInteractor : Interactor<SecondInteractor.SecondPresenter, SecondRout
       .subscribe { listener.goToFirstView() }
       .apply { disposables.add(this) }
     presenter.showSnack()
-      .subscribe { listener.showSnack(it) }
+      .subscribe {
+        listener.showSnack(it)
+        listener.logMessage(it)
+      }
       .apply { disposables.add(this) }
   }
 
@@ -35,6 +38,7 @@ class SecondInteractor : Interactor<SecondInteractor.SecondPresenter, SecondRout
   interface Listener {
     fun goToFirstView()
     fun showSnack(message: String)
+    fun logMessage(message: String)
   }
 
   interface SecondPresenter {

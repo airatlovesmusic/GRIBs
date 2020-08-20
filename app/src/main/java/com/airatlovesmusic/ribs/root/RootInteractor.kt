@@ -1,5 +1,6 @@
 package com.airatlovesmusic.ribs.root
 
+import com.airatlovesmusic.ribs.data.Logger
 import com.airatlovesmusic.ribs.main.MainInteractor
 import com.airatlovesmusic.ribs.second.SecondInteractor
 import com.uber.rib.core.Bundle
@@ -14,6 +15,8 @@ class RootInteractor : Interactor<RootInteractor.RootPresenter, RootRouter>() {
   lateinit var presenter: RootPresenter
   @Inject
   lateinit var listener: RootListener
+  @Inject
+  lateinit var logger: Logger
 
   override fun didBecomeActive(savedInstanceState: Bundle?) {
     super.didBecomeActive(savedInstanceState)
@@ -29,6 +32,10 @@ class RootInteractor : Interactor<RootInteractor.RootPresenter, RootRouter>() {
     override fun showSnack(message: String) {
       listener.showSnack(message)
     }
+
+    override fun logMessage(message: String) {
+      logger.logMessage(message)
+    }
   }
 
   inner class SecondListener: SecondInteractor.Listener {
@@ -36,8 +43,13 @@ class RootInteractor : Interactor<RootInteractor.RootPresenter, RootRouter>() {
       router.detachSecondView()
       router.attachMainView()
     }
+
     override fun showSnack(message: String) {
       listener.showSnack(message)
+    }
+
+    override fun logMessage(message: String) {
+      logger.logMessage(message)
     }
   }
 

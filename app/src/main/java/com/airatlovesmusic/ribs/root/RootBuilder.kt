@@ -3,6 +3,7 @@ package com.airatlovesmusic.ribs.root
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.airatlovesmusic.ribs.R
+import com.airatlovesmusic.ribs.data.Logger
 import com.airatlovesmusic.ribs.main.MainBuilder
 import com.airatlovesmusic.ribs.main.MainInteractor
 import com.airatlovesmusic.ribs.second.SecondBuilder
@@ -35,6 +36,7 @@ class RootBuilder(dependency: ParentComponent) :
 
   interface ParentComponent {
     fun listener(): RootInteractor.RootListener
+    fun logger(): Logger
   }
 
   @dagger.Module
