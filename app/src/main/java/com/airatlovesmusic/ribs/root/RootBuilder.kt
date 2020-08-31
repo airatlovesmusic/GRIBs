@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.airatlovesmusic.ribs.R
 import com.airatlovesmusic.ribs.data.Logger
-import com.airatlovesmusic.ribs.main.MainBuilder
-import com.airatlovesmusic.ribs.main.MainInteractor
+import com.airatlovesmusic.ribs.first.FirstBuilder
+import com.airatlovesmusic.ribs.first.FirstInteractor
 import com.airatlovesmusic.ribs.second.SecondBuilder
 import com.airatlovesmusic.ribs.second.SecondInteractor
 import com.uber.rib.core.InteractorBaseComponent
@@ -55,13 +55,13 @@ class RootBuilder(dependency: ParentComponent) :
         view: RootView,
         interactor: RootInteractor
       ): RootRouter {
-        return RootRouter(view, interactor, component, MainBuilder(component), SecondBuilder(component))
+        return RootRouter(view, interactor, component, FirstBuilder(component), SecondBuilder(component))
       }
 
       @RootScope
       @Provides
       @JvmStatic
-      fun mainListener(rootInteractor: RootInteractor): MainInteractor.Listener {
+      fun mainListener(rootInteractor: RootInteractor): FirstInteractor.Listener {
         return rootInteractor.MainListener()
       }
 
@@ -80,7 +80,7 @@ class RootBuilder(dependency: ParentComponent) :
     modules = [Module::class],
     dependencies = [ParentComponent::class]
   )
-  interface Component: InteractorBaseComponent<RootInteractor>, BuilderComponent, MainBuilder.ParentComponent, SecondBuilder.ParentComponent {
+  interface Component: InteractorBaseComponent<RootInteractor>, BuilderComponent, FirstBuilder.ParentComponent, SecondBuilder.ParentComponent {
 
     @dagger.Component.Builder
     interface Builder {

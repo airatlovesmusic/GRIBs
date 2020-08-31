@@ -1,5 +1,7 @@
 package com.airatlovesmusic.ribs.root
 
+import com.airatlovesmusic.ribs.first.FirstBuilder
+import com.airatlovesmusic.ribs.second.SecondBuilder
 import com.uber.rib.core.RibTestBasePlaceholder
 import com.uber.rib.core.RouterHelper
 
@@ -13,6 +15,8 @@ class RootRouterTest : RibTestBasePlaceholder() {
   @Mock internal lateinit var component: RootBuilder.Component
   @Mock internal lateinit var interactor: RootInteractor
   @Mock internal lateinit var view: RootView
+  @Mock internal lateinit var firstBuilder: FirstBuilder
+  @Mock internal lateinit var secondBuilder: SecondBuilder
 
   private var router: RootRouter? = null
 
@@ -20,7 +24,7 @@ class RootRouterTest : RibTestBasePlaceholder() {
   fun setup() {
     MockitoAnnotations.initMocks(this)
 
-    router = RootRouter(view, interactor, component)
+    router = RootRouter(view, interactor, component, firstBuilder, secondBuilder)
   }
 
   /**

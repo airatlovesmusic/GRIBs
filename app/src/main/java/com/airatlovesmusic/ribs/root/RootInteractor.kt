@@ -1,7 +1,7 @@
 package com.airatlovesmusic.ribs.root
 
 import com.airatlovesmusic.ribs.data.Logger
-import com.airatlovesmusic.ribs.main.MainInteractor
+import com.airatlovesmusic.ribs.first.FirstInteractor
 import com.airatlovesmusic.ribs.second.SecondInteractor
 import com.uber.rib.core.Bundle
 import com.uber.rib.core.Interactor
@@ -23,7 +23,7 @@ class RootInteractor : Interactor<RootInteractor.RootPresenter, RootRouter>() {
     router.attachMainView()
   }
 
-  inner class MainListener: MainInteractor.Listener {
+  inner class MainListener: FirstInteractor.Listener {
     override fun goToSecondScreen() {
       router.detachMainView()
       router.attachSecondView()

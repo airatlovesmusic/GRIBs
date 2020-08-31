@@ -1,5 +1,6 @@
 package com.airatlovesmusic.ribs.root
 
+import com.airatlovesmusic.ribs.data.Logger
 import com.uber.rib.core.RibTestBasePlaceholder
 import com.uber.rib.core.InteractorHelper
 
@@ -12,6 +13,8 @@ class RootInteractorTest : RibTestBasePlaceholder() {
 
   @Mock internal lateinit var presenter: RootInteractor.RootPresenter
   @Mock internal lateinit var router: RootRouter
+  @Mock internal lateinit var logger: Logger
+  @Mock internal lateinit var listener: RootInteractor.RootListener
 
   private var interactor: RootInteractor? = null
 
@@ -19,7 +22,7 @@ class RootInteractorTest : RibTestBasePlaceholder() {
   fun setup() {
     MockitoAnnotations.initMocks(this)
 
-    interactor = TestRootInteractor.create(presenter)
+    interactor = TestRootInteractor.create(presenter, listener, logger)
   }
 
   /**

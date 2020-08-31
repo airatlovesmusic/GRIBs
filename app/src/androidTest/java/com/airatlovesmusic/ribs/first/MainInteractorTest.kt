@@ -1,4 +1,4 @@
-package com.airatlovesmusic.ribs.main
+package com.airatlovesmusic.ribs.first
 
 import com.uber.rib.core.RibTestBasePlaceholder
 import com.uber.rib.core.InteractorHelper
@@ -10,16 +10,16 @@ import org.mockito.MockitoAnnotations
 
 class MainInteractorTest : RibTestBasePlaceholder() {
 
-  @Mock internal lateinit var presenter: MainInteractor.MainPresenter
-  @Mock internal lateinit var router: MainRouter
+  @Mock internal lateinit var presenter: FirstInteractor.MainPresenter
+  @Mock internal lateinit var router: FirstRouter
+  @Mock internal lateinit var listener: FirstInteractor.Listener
 
-  private var interactor: MainInteractor? = null
+  private var interactor: FirstInteractor? = null
 
   @Before
   fun setup() {
     MockitoAnnotations.initMocks(this)
-
-    interactor = TestMainInteractor.create(presenter)
+    interactor = TestMainInteractor.create(presenter, listener)
   }
 
   /**
@@ -28,7 +28,7 @@ class MainInteractorTest : RibTestBasePlaceholder() {
   @Test
   fun anExampleTest_withSomeConditions_shouldPass() {
     // Use InteractorHelper to drive your interactor's lifecycle.
-    InteractorHelper.attach<MainInteractor.MainPresenter, MainRouter>(interactor!!, presenter, router, null)
+    InteractorHelper.attach<FirstInteractor.MainPresenter, FirstRouter>(interactor!!, presenter, router, null)
     InteractorHelper.detach(interactor!!)
 
     throw RuntimeException("Remove this test and add real tests.")

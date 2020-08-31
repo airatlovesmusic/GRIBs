@@ -1,4 +1,4 @@
-package com.airatlovesmusic.ribs.main
+package com.airatlovesmusic.ribs.first
 
 import com.uber.rib.core.Bundle
 import com.uber.rib.core.Interactor
@@ -8,7 +8,7 @@ import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
 
 @RibInteractor
-class MainInteractor : Interactor<MainInteractor.MainPresenter, MainRouter>() {
+class FirstInteractor : Interactor<FirstInteractor.MainPresenter, FirstRouter>() {
 
   @Inject
   lateinit var presenter: MainPresenter

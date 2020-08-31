@@ -1,8 +1,7 @@
 package com.airatlovesmusic.ribs.root
 
-import com.airatlovesmusic.ribs.main.MainBuilder
-import com.airatlovesmusic.ribs.main.MainInteractor
-import com.airatlovesmusic.ribs.main.MainRouter
+import com.airatlovesmusic.ribs.first.FirstBuilder
+import com.airatlovesmusic.ribs.first.FirstRouter
 import com.airatlovesmusic.ribs.second.SecondBuilder
 import com.airatlovesmusic.ribs.second.SecondRouter
 import com.uber.rib.core.ViewRouter
@@ -11,11 +10,11 @@ class RootRouter(
     view: RootView,
     interactor: RootInteractor,
     component: RootBuilder.Component,
-    private val mainBuilder: MainBuilder,
+    private val mainBuilder: FirstBuilder,
     private val secondBuilder: SecondBuilder
 ) : ViewRouter<RootView, RootInteractor, RootBuilder.Component>(view, interactor, component) {
 
-    private var mainRouter: MainRouter? = null
+    private var mainRouter: FirstRouter? = null
     private var secondRouter: SecondRouter? = null
 
     fun attachMainView() {

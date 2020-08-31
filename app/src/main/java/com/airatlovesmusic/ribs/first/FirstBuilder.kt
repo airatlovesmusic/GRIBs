@@ -1,4 +1,4 @@
-package com.airatlovesmusic.ribs.main
+package com.airatlovesmusic.ribs.first
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -13,11 +13,11 @@ import java.lang.annotation.RetentionPolicy.CLASS
 import javax.inject.Qualifier
 import javax.inject.Scope
 
-class MainBuilder(dependency: ParentComponent) : ViewBuilder<MainView, MainRouter, MainBuilder.ParentComponent>(dependency) {
+class FirstBuilder(dependency: ParentComponent) : ViewBuilder<FirstView, FirstRouter, FirstBuilder.ParentComponent>(dependency) {
 
-  fun build(parentViewGroup: ViewGroup): MainRouter {
+  fun build(parentViewGroup: ViewGroup): FirstRouter {
     val view = createView(parentViewGroup)
-    val interactor = MainInteractor()
+    val interactor = FirstInteractor()
     val component = DaggerMainBuilder_Component.builder()
         .parentComponent(dependency)
         .view(view)
@@ -26,12 +26,12 @@ class MainBuilder(dependency: ParentComponent) : ViewBuilder<MainView, MainRoute
     return component.mainRouter()
   }
 
-  override fun inflateView(inflater: LayoutInflater, parentViewGroup: ViewGroup): MainView? {
-    return inflater.inflate(R.layout.main_rib, parentViewGroup, false) as MainView?
+  override fun inflateView(inflater: LayoutInflater, parentViewGroup: ViewGroup): FirstView? {
+    return inflater.inflate(R.layout.first_rib, parentViewGroup, false) as FirstView?
   }
 
   interface ParentComponent {
-    fun mainListener(): MainInteractor.Listener
+    fun mainListener(): FirstInteractor.Listener
   }
 
   @dagger.Module
@@ -39,7 +39,7 @@ class MainBuilder(dependency: ParentComponent) : ViewBuilder<MainView, MainRoute
 
     @MainScope
     @Binds
-    internal abstract fun presenter(view: MainView): MainInteractor.MainPresenter
+    internal abstract fun presenter(view: FirstView): FirstInteractor.MainPresenter
 
     @dagger.Module
     companion object {
@@ -48,11 +48,11 @@ class MainBuilder(dependency: ParentComponent) : ViewBuilder<MainView, MainRoute
       @Provides
       @JvmStatic
       internal fun router(
-          component: Component,
-          view: MainView,
-          interactor: MainInteractor
-      ): MainRouter {
-        return MainRouter(view, interactor, component)
+        component: Component,
+        view: FirstView,
+        interactor: FirstInteractor
+      ): FirstRouter {
+        return FirstRouter(view, interactor, component)
       }
     }
 
@@ -60,15 +60,15 @@ class MainBuilder(dependency: ParentComponent) : ViewBuilder<MainView, MainRoute
 
   @MainScope
   @dagger.Component(modules = arrayOf(Module::class), dependencies = arrayOf(ParentComponent::class))
-  interface Component : InteractorBaseComponent<MainInteractor>, BuilderComponent {
+  interface Component : InteractorBaseComponent<FirstInteractor>, BuilderComponent {
 
     @dagger.Component.Builder
     interface Builder {
       @BindsInstance
-      fun interactor(interactor: MainInteractor): Builder
+      fun interactor(interactor: FirstInteractor): Builder
 
       @BindsInstance
-      fun view(view: MainView): Builder
+      fun view(view: FirstView): Builder
 
       fun parentComponent(component: ParentComponent): Builder
       fun build(): Component
@@ -76,7 +76,7 @@ class MainBuilder(dependency: ParentComponent) : ViewBuilder<MainView, MainRoute
   }
 
   interface BuilderComponent {
-    fun mainRouter(): MainRouter
+    fun mainRouter(): FirstRouter
   }
 
   @Scope
