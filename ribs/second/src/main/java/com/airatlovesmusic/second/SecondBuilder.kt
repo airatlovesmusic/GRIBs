@@ -2,7 +2,6 @@ package com.airatlovesmusic.second
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.airatlovesmusic.ribs.R
 import com.uber.rib.core.InteractorBaseComponent
 import com.uber.rib.core.ViewBuilder
 import dagger.Binds

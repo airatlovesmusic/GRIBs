@@ -1,4 +1,4 @@
-package com.airatlovesmusic.ribs.data
+package com.airatlovesmusic.global
 
 import android.util.Log
 

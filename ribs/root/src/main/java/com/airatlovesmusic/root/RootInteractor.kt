@@ -1,8 +1,8 @@
 package com.airatlovesmusic.root
 
-import com.airatlovesmusic.ribs.data.Logger
-import com.airatlovesmusic.ribs.first.FirstInteractor
-import com.airatlovesmusic.ribs.second.SecondInteractor
+import com.airatlovesmusic.first.FirstInteractor
+import com.airatlovesmusic.global.Logger
+import com.airatlovesmusic.second.SecondInteractor
 import com.uber.rib.core.Bundle
 import com.uber.rib.core.Interactor
 import com.uber.rib.core.RibInteractor

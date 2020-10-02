@@ -2,8 +2,8 @@ package com.airatlovesmusic.ribs
 
 import android.os.Bundle
 import android.view.ViewGroup
-import com.airatlovesmusic.ribs.data.Logger
-import com.airatlovesmusic.ribs.di.DaggerAppComponent
+import com.airatlovesmusic.global.Logger
+import com.airatlovesmusic.ribs.DaggerAppComponent
 import com.airatlovesmusic.root.RootBuilder
 import com.airatlovesmusic.root.RootInteractor
 import com.google.android.material.snackbar.Snackbar

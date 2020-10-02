@@ -2,7 +2,6 @@ package com.airatlovesmusic.first
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.airatlovesmusic.ribs.R
 import com.uber.rib.core.InteractorBaseComponent
 import com.uber.rib.core.ViewBuilder
 import dagger.Binds
@@ -18,7 +17,7 @@ class FirstBuilder(dependency: ParentComponent) : ViewBuilder<FirstView, FirstRo
   fun build(parentViewGroup: ViewGroup): FirstRouter {
     val view = createView(parentViewGroup)
     val interactor = FirstInteractor()
-    val component = DaggerMainBuilder_Component.builder()
+    val component = DaggerFirstBuilder_Component.builder()
         .parentComponent(dependency)
         .view(view)
         .interactor(interactor)
@@ -59,7 +58,10 @@ class FirstBuilder(dependency: ParentComponent) : ViewBuilder<FirstView, FirstRo
   }
 
   @MainScope
-  @dagger.Component(modules = arrayOf(Module::class), dependencies = arrayOf(ParentComponent::class))
+  @dagger.Component(
+    modules = [Module::class],
+    dependencies = [ParentComponent::class]
+  )
   interface Component : InteractorBaseComponent<FirstInteractor>, BuilderComponent {
 
     @dagger.Component.Builder

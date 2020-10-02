@@ -2,12 +2,11 @@ package com.airatlovesmusic.root
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.airatlovesmusic.ribs.R
-import com.airatlovesmusic.ribs.data.Logger
-import com.airatlovesmusic.ribs.first.FirstBuilder
-import com.airatlovesmusic.ribs.first.FirstInteractor
-import com.airatlovesmusic.ribs.second.SecondBuilder
-import com.airatlovesmusic.ribs.second.SecondInteractor
+import com.airatlovesmusic.first.FirstBuilder
+import com.airatlovesmusic.first.FirstInteractor
+import com.airatlovesmusic.global.Logger
+import com.airatlovesmusic.second.SecondBuilder
+import com.airatlovesmusic.second.SecondInteractor
 import com.uber.rib.core.InteractorBaseComponent
 import com.uber.rib.core.ViewBuilder
 import dagger.Binds

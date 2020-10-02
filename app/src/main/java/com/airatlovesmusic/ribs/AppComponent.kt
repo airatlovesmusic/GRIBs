@@ -1,7 +1,6 @@
-package com.airatlovesmusic.ribs.di
+package com.airatlovesmusic.ribs
 
-import com.airatlovesmusic.ribs.AppActivity
-import com.airatlovesmusic.ribs.data.Logger
+import com.airatlovesmusic.global.Logger
 import dagger.Component
 import dagger.Module
 import dagger.Provides

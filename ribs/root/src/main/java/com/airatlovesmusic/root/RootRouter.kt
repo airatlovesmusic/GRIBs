@@ -1,9 +1,9 @@
 package com.airatlovesmusic.root
 
-import com.airatlovesmusic.ribs.first.FirstBuilder
-import com.airatlovesmusic.ribs.first.FirstRouter
-import com.airatlovesmusic.ribs.second.SecondBuilder
-import com.airatlovesmusic.ribs.second.SecondRouter
+import com.airatlovesmusic.first.FirstBuilder
+import com.airatlovesmusic.first.FirstRouter
+import com.airatlovesmusic.second.SecondBuilder
+import com.airatlovesmusic.second.SecondRouter
 import com.uber.rib.core.ViewRouter
 
 class RootRouter(
