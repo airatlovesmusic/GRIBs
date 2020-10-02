@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.airatlovesmusic.ribs.second.SecondView
+<com.airatlovesmusic.second.SecondView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/root"
     android:layout_width="match_parent"
@@ -20,4 +20,4 @@
         android:layout_margin="16dp"
         android:text="Go to first screen"/>
 
-</com.airatlovesmusic.ribs.second.SecondView>
+</com.airatlovesmusic.second.SecondView>

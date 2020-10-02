@@ -1,4 +1,4 @@
-package com.airatlovesmusic.ribs.second
+package com.airatlovesmusic.second
 
 import com.uber.rib.core.Bundle
 import com.uber.rib.core.Interactor

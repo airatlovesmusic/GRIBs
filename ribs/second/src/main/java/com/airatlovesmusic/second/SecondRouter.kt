@@ -1,6 +1,4 @@
-package com.airatlovesmusic.ribs.second
-
-import android.view.View
+package com.airatlovesmusic.second
 
 import com.uber.rib.core.ViewRouter
 

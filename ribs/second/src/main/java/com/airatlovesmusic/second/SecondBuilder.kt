@@ -1,4 +1,4 @@
-package com.airatlovesmusic.ribs.second
+package com.airatlovesmusic.second
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -50,7 +50,8 @@ class SecondBuilder(dependency: ParentComponent) : ViewBuilder<SecondView, Secon
       internal fun router(
           component: Component,
           view: SecondView,
-          interactor: SecondInteractor): SecondRouter {
+          interactor: SecondInteractor
+      ): SecondRouter {
         return SecondRouter(view, interactor, component)
       }
     }
