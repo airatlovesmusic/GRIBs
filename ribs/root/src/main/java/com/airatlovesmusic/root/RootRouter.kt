@@ -1,4 +1,4 @@
-package com.airatlovesmusic.ribs.root
+package com.airatlovesmusic.root
 
 import com.airatlovesmusic.ribs.first.FirstBuilder
 import com.airatlovesmusic.ribs.first.FirstRouter

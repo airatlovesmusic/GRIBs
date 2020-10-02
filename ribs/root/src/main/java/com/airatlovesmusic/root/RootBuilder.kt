@@ -1,4 +1,4 @@
-package com.airatlovesmusic.ribs.root
+package com.airatlovesmusic.root
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -51,9 +51,9 @@ class RootBuilder(dependency: ParentComponent) :
       @Provides
       @JvmStatic
       internal fun router(
-        component: Component,
-        view: RootView,
-        interactor: RootInteractor
+          component: Component,
+          view: RootView,
+          interactor: RootInteractor
       ): RootRouter {
         return RootRouter(view, interactor, component, FirstBuilder(component), SecondBuilder(component))
       }
