@@ -21,10 +21,10 @@ class AppActivity: RibActivity() {
     }
 
     override fun createRouter(parentViewGroup: ViewGroup): ViewRouter<*, *, *> {
-        val builder = com.airatlovesmusic.root.RootBuilder(object :
-            com.airatlovesmusic.root.RootBuilder.ParentComponent {
-            override fun listener(): com.airatlovesmusic.root.RootInteractor.RootListener =
-                object : com.airatlovesmusic.root.RootInteractor.RootListener {
+        val builder = RootBuilder(object :
+            RootBuilder.ParentComponent {
+            override fun listener(): RootInteractor.RootListener =
+                object : RootInteractor.RootListener {
                     override fun showSnack(message: String) {
                         Snackbar.make(parentViewGroup.rootView, message, Snackbar.LENGTH_SHORT)
                             .show()
