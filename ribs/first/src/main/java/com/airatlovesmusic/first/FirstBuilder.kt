@@ -1,4 +1,4 @@
-package com.airatlovesmusic.ribs.first
+package com.airatlovesmusic.first
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -48,9 +48,9 @@ class FirstBuilder(dependency: ParentComponent) : ViewBuilder<FirstView, FirstRo
       @Provides
       @JvmStatic
       internal fun router(
-        component: Component,
-        view: FirstView,
-        interactor: FirstInteractor
+          component: Component,
+          view: FirstView,
+          interactor: FirstInteractor
       ): FirstRouter {
         return FirstRouter(view, interactor, component)
       }

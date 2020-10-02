@@ -10,11 +10,11 @@ import org.mockito.MockitoAnnotations
 
 class MainInteractorTest : RibTestBasePlaceholder() {
 
-  @Mock internal lateinit var presenter: FirstInteractor.MainPresenter
-  @Mock internal lateinit var router: FirstRouter
-  @Mock internal lateinit var listener: FirstInteractor.Listener
+  @Mock internal lateinit var presenter: com.airatlovesmusic.first.FirstInteractor.MainPresenter
+  @Mock internal lateinit var router: com.airatlovesmusic.first.FirstRouter
+  @Mock internal lateinit var listener: com.airatlovesmusic.first.FirstInteractor.Listener
 
-  private var interactor: FirstInteractor? = null
+  private var interactor: com.airatlovesmusic.first.FirstInteractor? = null
 
   @Before
   fun setup() {
@@ -28,7 +28,7 @@ class MainInteractorTest : RibTestBasePlaceholder() {
   @Test
   fun anExampleTest_withSomeConditions_shouldPass() {
     // Use InteractorHelper to drive your interactor's lifecycle.
-    InteractorHelper.attach<FirstInteractor.MainPresenter, FirstRouter>(interactor!!, presenter, router, null)
+    InteractorHelper.attach<com.airatlovesmusic.first.FirstInteractor.MainPresenter, com.airatlovesmusic.first.FirstRouter>(interactor!!, presenter, router, null)
     InteractorHelper.detach(interactor!!)
 
     throw RuntimeException("Remove this test and add real tests.")

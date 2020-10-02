@@ -1,4 +1,4 @@
-package com.airatlovesmusic.ribs.first
+package com.airatlovesmusic.first
 
 import com.uber.rib.core.ViewRouter
 

@@ -10,17 +10,17 @@ import org.mockito.MockitoAnnotations
 
 class MainRouterTest : RibTestBasePlaceholder() {
 
-  @Mock internal lateinit var component: FirstBuilder.Component
-  @Mock internal lateinit var interactor: FirstInteractor
-  @Mock internal lateinit var view: FirstView
+  @Mock internal lateinit var component: com.airatlovesmusic.first.FirstBuilder.Component
+  @Mock internal lateinit var interactor: com.airatlovesmusic.first.FirstInteractor
+  @Mock internal lateinit var view: com.airatlovesmusic.first.FirstView
 
-  private var router: FirstRouter? = null
+  private var router: com.airatlovesmusic.first.FirstRouter? = null
 
   @Before
   fun setup() {
     MockitoAnnotations.initMocks(this)
 
-    router = FirstRouter(view, interactor, component)
+    router = com.airatlovesmusic.first.FirstRouter(view, interactor, component)
   }
 
   /**
