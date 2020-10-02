@@ -12,6 +12,11 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/global" />
+            <option value="$PROJECT_DIR$/ribs" />
+            <option value="$PROJECT_DIR$/ribs/first" />
+            <option value="$PROJECT_DIR$/ribs/root" />
+            <option value="$PROJECT_DIR$/ribs/second" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
