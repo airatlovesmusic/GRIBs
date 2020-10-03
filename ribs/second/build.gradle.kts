@@ -33,16 +33,14 @@ android {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
-    implementation("androidx.core:core-ktx:1.3.1")
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("com.google.android.material:material:1.2.1")
+    implementation(ext.deps.androidx.core)
+    implementation(extdeps.androidx.appcompat)
+    implementation(ext.deps.androidx.material)
 
-    implementation("com.uber.rib:rib-android:0.9.2")
-    kapt("com.uber.rib:rib-compiler-test:0.9.2")
+    implementation(ext.deps.ribs)
 
-    implementation("com.google.dagger:dagger:2.28")
-    kapt("com.google.dagger:dagger-compiler:2.28")
+    implementation(ext.deps.dagger.runtime)
+    kapt(ext.deps.dagger.compiler)
 
-    implementation("com.jakewharton.rxbinding3:rxbinding:3.1.0")
+    implementation(ext.deps.rxbinding)
 }

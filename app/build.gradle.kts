@@ -35,18 +35,14 @@ android {
 
 dependencies {
     implementation(project(":ribs:root"))
-    implementation("androidx.core:core-ktx:1.2.0")
-    implementation("androidx.appcompat:appcompat:1.1.0")
-    implementation("com.google.android.material:material:1.3.0-alpha02")
-    implementation("androidx.fragment:fragment:1.2.1")
-    implementation("androidx.constraintlayout:constraintlayout:1.1.3")
+    implementation(deps.androidx.core)
+    implementation(deps.androidx.appcompat)
+    implementation(deps.androidx.material)
 
-    implementation("com.uber.rib:rib-android:0.9.2")
-    implementation(project(":global"))
-    kapt("com.uber.rib:rib-compiler-test:0.9.2")
+    implementation(ext.deps.ribs)
 
-    implementation("com.google.dagger:dagger:2.28")
-    kapt("com.google.dagger:dagger-compiler:2.28")
+    implementation(ext.deps.dagger.runtime)
+    kapt(ext.deps.dagger.compiler)
 
-    implementation("com.jakewharton.rxbinding3:rxbinding:3.1.0")
+    implementation(ext.deps.rxbinding)
 }

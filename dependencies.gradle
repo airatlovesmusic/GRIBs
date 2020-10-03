@@ -1,0 +1,34 @@
+def versions = [
+        dagger: '2.27',
+        ribs: '0.9.2',
+        rxbinding: '3.1.0'
+]
+
+ext.versions = versions
+
+ext.deps = [
+        stdLib: "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin_version}",
+        android            : [
+                build       : [
+                        buildToolsVersion: '29.0.3',
+                        compileSdkVersion: 30,
+                        minSdkVersion    : 23,
+                        targetSdkVersion : 30
+                ],
+                gradlePlugin: 'com.android.tools.build:gradle:4.0.1',
+        ],
+        androidx:[
+                ktx: [
+                        core: 'androidx.core:core-ktx:1.3.1',
+                        activity: 'androidx.activity:activity-ktx:1.1.0'
+                ],
+                appcompat: 'androidx.appcompat:appcompat:1.2.0',
+                material: "com.google.android.material:material:1.3.0-alpha02"
+        ],
+        dagger: [
+                runtime: "com.google.dagger:dagger:${versions.dagger}",
+                compiler: "com.google.dagger:dagger-compiler:${versions.dagger}"
+        ],
+        ribs: "com.uber.rib:rib-android:$versions.ribs",
+        rxbinding: "com.jakewharton.rxbinding3:rxbinding:$versions.rxbinding"
+]
