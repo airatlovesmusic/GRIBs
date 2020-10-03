@@ -1,8 +1,7 @@
 plugins {
-    id("com.android.library")
-    kotlin("android")
-    id("kotlin-android-extensions")
-    kotlin("kapt")
+    id(BuildPlugin.androidLibrary)
+    id(BuildPlugin.kotlinAndroid)
+    id(BuildPlugin.kotlinAndroidExtensions)
 }
 
 android {
@@ -33,7 +32,7 @@ android {
 }
 
 dependencies {
-    implementation(ext.deps.androidx.core)
-    implementation(extdeps.androidx.appcompat)
-    implementation(ext.deps.androidx.material)
+    implementation(Dependencies.AndroidX.appCompat)
+    implementation(Dependencies.AndroidX.core)
+    implementation(Dependencies.AndroidX.material)
 }

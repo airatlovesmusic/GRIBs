@@ -1,8 +1,8 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    id("kotlin-android-extensions")
-    kotlin("kapt")
+    id(BuildPlugin.androidApplication)
+    id(BuildPlugin.kotlinAndroid)
+    id(BuildPlugin.kotlinAndroidExtensions)
+    id(BuildPlugin.kotlinKapt)
 }
 
 android {
@@ -35,14 +35,16 @@ android {
 
 dependencies {
     implementation(project(":ribs:root"))
-    implementation(deps.androidx.core)
-    implementation(deps.androidx.appcompat)
-    implementation(deps.androidx.material)
+    implementation(project(":global"))
 
-    implementation(ext.deps.ribs)
+    implementation(Dependencies.AndroidX.material)
+    implementation(Dependencies.AndroidX.core)
+    implementation(Dependencies.AndroidX.appCompat)
 
-    implementation(ext.deps.dagger.runtime)
-    kapt(ext.deps.dagger.compiler)
+    implementation(Dependencies.ribs)
 
-    implementation(ext.deps.rxbinding)
+    implementation(Dependencies.daggerRuntime)
+    kapt(Dependencies.daggerCompile)
+
+    implementation(Dependencies.rxBinding)
 }

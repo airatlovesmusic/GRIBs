@@ -3,7 +3,6 @@ package com.airatlovesmusic.ribs
 import android.os.Bundle
 import android.view.ViewGroup
 import com.airatlovesmusic.global.Logger
-import com.airatlovesmusic.ribs.DaggerAppComponent
 import com.airatlovesmusic.root.RootBuilder
 import com.airatlovesmusic.root.RootInteractor
 import com.google.android.material.snackbar.Snackbar
