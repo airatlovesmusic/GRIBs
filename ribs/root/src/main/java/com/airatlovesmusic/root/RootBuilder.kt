@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.airatlovesmusic.first.FirstBuilder
 import com.airatlovesmusic.first.FirstInteractor
-import com.airatlovesmusic.global.Logger
+import com.airatlovesmusic.global.system.logger.Logger
 import com.airatlovesmusic.second.SecondBuilder
 import com.airatlovesmusic.second.SecondInteractor
 import com.uber.rib.core.InteractorBaseComponent

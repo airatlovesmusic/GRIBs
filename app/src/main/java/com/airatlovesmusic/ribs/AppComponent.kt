@@ -1,24 +1,15 @@
 package com.airatlovesmusic.ribs
 
-import com.airatlovesmusic.global.Logger
+import com.airatlovesmusic.global.system.logger.LoggerModule
 import dagger.Component
-import dagger.Module
-import dagger.Provides
 import javax.inject.Scope
 
 @AppScope
 @Component(
-    modules = [AppModule::class]
+    modules = [LoggerModule::class]
 )
 interface AppComponent {
     fun inject(appActivity: AppActivity)
-}
-
-@Module
-class AppModule {
-    @Provides
-    @AppScope
-    fun provideLogger(): Logger = Logger()
 }
 
 @Scope

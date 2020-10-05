@@ -1,7 +1,7 @@
 package com.airatlovesmusic.root
 
 import com.airatlovesmusic.first.FirstInteractor
-import com.airatlovesmusic.global.Logger
+import com.airatlovesmusic.global.system.logger.Logger
 import com.airatlovesmusic.second.SecondInteractor
 import com.uber.rib.core.Bundle
 import com.uber.rib.core.Interactor

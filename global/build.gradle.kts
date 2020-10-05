@@ -2,6 +2,7 @@ plugins {
     id(BuildPlugin.androidLibrary)
     id(BuildPlugin.kotlinAndroid)
     id(BuildPlugin.kotlinAndroidExtensions)
+    id(BuildPlugin.kotlinKapt)
 }
 
 android {
@@ -35,4 +36,6 @@ dependencies {
     implementation(Dependencies.AndroidX.appCompat)
     implementation(Dependencies.AndroidX.core)
     implementation(Dependencies.AndroidX.material)
+    implementation(Dependencies.daggerRuntime)
+    kapt(Dependencies.daggerCompile)
 }

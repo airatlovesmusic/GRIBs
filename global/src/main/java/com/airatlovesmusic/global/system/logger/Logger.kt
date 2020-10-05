@@ -1,4 +1,4 @@
-package com.airatlovesmusic.global
+package com.airatlovesmusic.global.system.logger
 
 import android.util.Log
 

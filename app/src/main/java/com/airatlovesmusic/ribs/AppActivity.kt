@@ -2,7 +2,7 @@ package com.airatlovesmusic.ribs
 
 import android.os.Bundle
 import android.view.ViewGroup
-import com.airatlovesmusic.global.Logger
+import com.airatlovesmusic.global.system.logger.Logger
 import com.airatlovesmusic.root.RootBuilder
 import com.airatlovesmusic.root.RootInteractor
 import com.google.android.material.snackbar.Snackbar
